@@ -1,7 +1,7 @@
-# Fit files #
-#############
+# File extensions #
+###################
 *.FIT
-
-# PDF files #
-#############
 *.pdf
+*.txt
+*.pickle
+*.zip
