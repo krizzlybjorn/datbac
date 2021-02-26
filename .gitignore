@@ -1,3 +1,7 @@
 # Fit files #
 #############
 *.FIT
+
+# PDF files #
+#############
+*.pdf
