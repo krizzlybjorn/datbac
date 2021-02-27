@@ -14,6 +14,9 @@ Delete a branch:
 
 Switch back to master branch and clean local repository:
 > git checkout master
+>
 > git fetch origin
+>
 > git reset --hard origin/master
+>
 > git clean -ffdx
