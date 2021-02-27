@@ -11,3 +11,9 @@ Create a branch and switch to it:
 
 Delete a branch:
 > git branch -d branchname
+
+Switch back to master branch and clean local repository:
+> git checkout master
+> git fetch origin
+> git reset --hard origin/master
+> git clean -ffdx
