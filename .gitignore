@@ -3,5 +3,9 @@
 *.FIT
 *.pdf
 *.txt
+!requirements.txt
 *.pickle
 *.zip
+
+#Virtual environments
+venv
