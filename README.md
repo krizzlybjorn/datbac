@@ -20,6 +20,7 @@ When working on new notebook.
 
 Activate virtual env (do this when working on project):
 > venv\Scripts\activate (windows)
+> 
 > source venv/bin/activate (linux)
 
 
