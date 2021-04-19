@@ -61,3 +61,34 @@ Switch back to master branch and clean local repository:
 > git reset --hard origin/master
 >
 > git clean -ffdx
+
+### How to edit a commit after it has been pushed ###
+##### Take great care when using this, as rewriting the history could mess up everything for everyone
+
+Start by finding the commit
+> git log --oneline
+
+Use rebase interactive on the commits from HEAD untill you reach the commit. If it is the latest commit, use 1.
+> git rebase -i HEAD~1
+>
+> git rebase -i HEAD~n
+
+Git will now open a texteditor. Change the "pick" keyword to "e" or "edit" for the commit. 
+##### DO NOT REMOVE OR CHANGE THE OTHER LINES.
+Save and close
+
+Edit whatever was wrong with the commit.
+
+Stage the changes
+> git add foobar
+
+Commit the changes using amend. Optionally, use also "no-edit" to leave the commit message unchanged.
+> git commit --amend --no-edit
+
+If everything looks good, complete the rebase and push.
+> git rebase --continue
+> 
+> git push -f
+
+Abort the rebase if needed.
+> git rebase --abort
